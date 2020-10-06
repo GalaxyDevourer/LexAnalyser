@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.java.controllers.MainController">
+   <children>
+      <TextArea fx:id="sql_query" layoutX="14.0" layoutY="14.0" prefHeight="178.0" prefWidth="470.0" />
+      <Button fx:id="start_processing" layoutX="14.0" layoutY="205.0" onMouseClicked="#startProcessing" prefHeight="27.0" prefWidth="470.0" text="Start processing" />
+      <TableView fx:id="lexis_table" layoutX="15.0" layoutY="291.0" onMouseClicked="#findSelectedItem" prefHeight="295.0" prefWidth="470.0">
+        <columns>
+          <TableColumn fx:id="token_column" prefWidth="123.0" text="Token" />
+          <TableColumn fx:id="lexis_column" prefWidth="129.0" text="Lexis" />
+            <TableColumn fx:id="start_column" prefWidth="72.0" text="Start" />
+            <TableColumn fx:id="length_column" prefWidth="73.0" text="Length" />
+            <TableColumn fx:id="position_column" prefWidth="72.0" text="Position" />
+        </columns>
+      </TableView>
+      <TextArea fx:id="shorted_query" layoutX="14.0" layoutY="244.0" prefHeight="14.0" prefWidth="470.0" />
+   </children>
+</AnchorPane>
