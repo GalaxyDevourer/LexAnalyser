@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="150.0" prefWidth="250.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.java.controllers.MenuController">
+   <children>
+      <Button fx:id="lexis_follow_button" layoutX="31.0" layoutY="41.0" mnemonicParsing="false" onMouseClicked="#loadLexisAnalyserWindow" prefHeight="22.0" prefWidth="189.0" text="Follow" />
+      <Label layoutX="79.0" layoutY="14.0" text="Lexis Analyser">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="69.0" layoutY="81.0" text="Syntactic Analyser">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Button fx:id="synt_follow_button" layoutX="31.0" layoutY="107.0" mnemonicParsing="false" onMouseClicked="#loadSyntAnalyserWindow" prefHeight="22.0" prefWidth="189.0" text="Follow" />
+   </children>
+</AnchorPane>

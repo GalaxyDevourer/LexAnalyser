@@ -12,13 +12,10 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("gui/main_gui.fxml"));
-        primaryStage.setTitle("Lexis Analyser");
+        Parent root = FXMLLoader.load(getClass().getResource("gui/menu_gui.fxml"));
+        primaryStage.setTitle("Combined Analyser");
 
-        Scene scene = new Scene(root, 500, 600);
-        scene.getStylesheets().add(
-                Objects.requireNonNull(getClass().getClassLoader().getResource("style.css")).toExternalForm()
-        );
+        Scene scene = new Scene(root, 250, 150);
 
         primaryStage.setScene(scene);
         primaryStage.show();

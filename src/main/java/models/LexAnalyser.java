@@ -11,7 +11,7 @@ import java.util.regex.Pattern;
 
 public class LexAnalyser {
     private String query;
-    private List<LexisEntity> lexis_list = new ArrayList<>();
+    private List<LexisEntity> lexisEntityList = new ArrayList<>();
 
     private static final Pattern CLEAR_PATTERN = Pattern.compile("[\\s]+");
     private static final Pattern SYMBOL_PATTERN = Pattern.compile("[;,()]*");
@@ -88,7 +88,7 @@ public class LexAnalyser {
             position += positionIfExist(entity);
 
             if (!SYMBOL_PATTERN.matcher(lexis).matches()) {
-                lexis_list.add(entity);
+                lexisEntityList.add(entity);
             }
 
             start_pos += length;
@@ -110,8 +110,8 @@ public class LexAnalyser {
     private int positionIfExist(LexisEntity entity) {
         AtomicInteger i = new AtomicInteger(1);
 
-        if (!lexis_list.isEmpty()) {
-            lexis_list.forEach( x -> {
+        if (!lexisEntityList.isEmpty()) {
+            lexisEntityList.forEach(x -> {
                 if (x.getLexis().equals(entity.getLexis())) {
                     entity.setPostition(x.getPostition());
                     if ( i.get() == 1) i.set(0);
@@ -130,11 +130,11 @@ public class LexAnalyser {
         this.query = query;
     }
 
-    public List<LexisEntity> getLexis_list() {
-        return lexis_list;
+    public List<LexisEntity> getLexisEntityList() {
+        return lexisEntityList;
     }
 
-    public void setLexis_list(List<LexisEntity> lexis_list) {
-        this.lexis_list = lexis_list;
+    public void setLexisEntityList(List<LexisEntity> lexisEntityList) {
+        this.lexisEntityList = lexisEntityList;
     }
 }

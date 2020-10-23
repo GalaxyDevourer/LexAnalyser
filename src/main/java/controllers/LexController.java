@@ -11,7 +11,7 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import main.java.entities.LexisEntity;
 import main.java.models.LexAnalyser;
 
-public class MainController {
+public class LexController {
     @FXML public TextArea sql_query;
     @FXML public TextArea shorted_query;
 
@@ -57,7 +57,7 @@ public class MainController {
 
         shorted_query.setText(analyser.getQuery());
 
-        ObservableList<LexisEntity> observableList = FXCollections.observableArrayList(analyser.getLexis_list());
+        ObservableList<LexisEntity> observableList = FXCollections.observableArrayList(analyser.getLexisEntityList());
         lexis_table.setItems(observableList);
     }
 
