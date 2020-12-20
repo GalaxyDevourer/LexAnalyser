@@ -1,12 +1,12 @@
-package main.java.controllers;
+package controllers;
 
+import entities.SyntEntity;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
-import main.java.entities.SyntEntity;
-import main.java.models.SyntAnalyser;
+import models.SyntAnalyser;
 
 public class SyntController {
     @FXML public Button start_processing_button;

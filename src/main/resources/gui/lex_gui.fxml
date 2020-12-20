@@ -3,7 +3,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="500.0" stylesheets="@../../resources/style.css" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.java.controllers.LexController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="500.0" stylesheets="@../style.css" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.LexController">
    <children>
       <TextArea fx:id="sql_query" layoutX="14.0" layoutY="14.0" prefHeight="178.0" prefWidth="470.0" />
       <Button fx:id="start_processing" layoutX="14.0" layoutY="205.0" onMouseClicked="#startProcessing" prefHeight="27.0" prefWidth="470.0" text="Start processing" />

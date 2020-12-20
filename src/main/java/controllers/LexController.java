@@ -1,5 +1,6 @@
-package main.java.controllers;
+package controllers;
 
+import entities.LexisEntity;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -8,8 +9,7 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.cell.PropertyValueFactory;
-import main.java.entities.LexisEntity;
-import main.java.models.LexAnalyser;
+import models.LexAnalyser;
 
 public class LexController {
     @FXML public TextArea sql_query;

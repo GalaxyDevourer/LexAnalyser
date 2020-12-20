@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="462.0" prefWidth="970.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.HybridController">
+   <children>
+      <TextArea fx:id="inputArea" layoutX="14.0" layoutY="12.0" prefHeight="39.0" prefWidth="674.0" />
+      <TableView fx:id="outputTable" layoutX="14.0" layoutY="67.0" prefHeight="382.0" prefWidth="943.0">
+        <columns>
+          <TableColumn fx:id="positionColumn" prefWidth="51.99998474121094" text="Position" />
+            <TableColumn fx:id="tokenColumn" prefWidth="86.0" text="Token" />
+            <TableColumn fx:id="lexemColumn" prefWidth="108.0" text="Lexem" />
+          <TableColumn fx:id="startColumn" prefWidth="43.0" text="Start" />
+            <TableColumn fx:id="lengthColumn" prefWidth="53.0" text="Length" />
+            <TableColumn fx:id="stackColumn" prefWidth="248.0" text="Stack" />
+            <TableColumn fx:id="inputColumn" prefWidth="230.0" text="Input" />
+            <TableColumn fx:id="productionColumn" prefWidth="123.0" text="Production" />
+        </columns>
+      </TableView>
+      <Button fx:id="analyseButton" layoutX="704.0" layoutY="12.0" mnemonicParsing="false" onMouseClicked="#startAnalyse" prefHeight="39.0" prefWidth="252.0" text="Start Analyse" />
+   </children>
+</AnchorPane>

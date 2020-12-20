@@ -1,8 +1,8 @@
-package main.java.models;
+package models;
 
 import com.sun.deploy.util.StringUtils;
+import entities.SyntEntity;
 import javafx.util.Pair;
-import main.java.entities.SyntEntity;
 
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
@@ -23,7 +23,7 @@ public class SyntAnalyser {
         this.jumpTable = initJumpTable();
 
         stack.add("$");
-        stack.add("<E>");
+        stack.add("<A>");
     }
 
     // 0 = successful, -1 = error
@@ -107,6 +107,34 @@ public class SyntAnalyser {
     private HashMap<Pair<String, String>, List<String>> initJumpTable () {
         HashMap<Pair<String, String>, List<String>> table = new HashMap<>();
 
+        table.put(new Pair<>("<A>","a"), Arrays.asList("<C>", "<B>"));
+        table.put(new Pair<>("<A>","b"), Arrays.asList("<C>", "<B>"));
+        table.put(new Pair<>("<A>","c"), Arrays.asList("<C>", "<B>"));
+        table.put(new Pair<>("<A>","d"), Arrays.asList("<C>", "<B>"));
+        table.put(new Pair<>("<A>","("), Arrays.asList("<C>", "<B>"));
+
+        table.put(new Pair<>("<B>","+"), Arrays.asList("+", "<C>", "<B>"));
+        table.put(new Pair<>("<B>",")"), Collections.singletonList("ε"));
+        table.put(new Pair<>("<B>","$"), Collections.singletonList("ε"));
+
+        table.put(new Pair<>("<C>","a"), Arrays.asList("<F>", "<D>"));
+        table.put(new Pair<>("<C>","b"), Arrays.asList("<F>", "<D>"));
+        table.put(new Pair<>("<C>","c"), Arrays.asList("<F>", "<D>"));
+        table.put(new Pair<>("<C>","d"), Arrays.asList("<F>", "<D>"));
+        table.put(new Pair<>("<C>","("), Arrays.asList("<F>", "<D>"));
+
+        table.put(new Pair<>("<D>","+"), Collections.singletonList("ε"));
+        table.put(new Pair<>("<D>","/"), Arrays.asList("/", "<F>", "<D>"));
+        table.put(new Pair<>("<D>",")"), Collections.singletonList("ε"));
+        table.put(new Pair<>("<D>","$"), Collections.singletonList("ε"));
+
+        table.put(new Pair<>("<F>","a"), Collections.singletonList("a"));
+        table.put(new Pair<>("<F>","b"), Collections.singletonList("b"));
+        table.put(new Pair<>("<F>","c"), Collections.singletonList("c"));
+        table.put(new Pair<>("<F>","d"), Collections.singletonList("d"));
+        table.put(new Pair<>("<F>","("), Arrays.asList("(", "<A>", ")"));
+
+        /*
         table.put(new Pair<>("<E>","a"), Arrays.asList("<T>", "<E2>"));
         table.put(new Pair<>("<E>","b"), Arrays.asList("<T>", "<E2>"));
         table.put(new Pair<>("<E>","c"), Arrays.asList("<T>", "<E2>"));
@@ -136,6 +164,7 @@ public class SyntAnalyser {
         table.put(new Pair<>("<F>","c"), Collections.singletonList("c"));
         table.put(new Pair<>("<F>","d"), Collections.singletonList("d"));
         table.put(new Pair<>("<F>","("), Arrays.asList("(", "<E>", ")"));
+         */
 
         return table;
     }

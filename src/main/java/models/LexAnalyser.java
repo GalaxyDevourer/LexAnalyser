@@ -1,6 +1,6 @@
-package main.java.models;
+package models;
 
-import main.java.entities.LexisEntity;
+import entities.LexisEntity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -36,6 +36,7 @@ public class LexAnalyser {
     private static final Pattern NUMBER = Pattern.compile("[0-9]+\\.[0-9]*");
     private static final Pattern STRING = Pattern.compile("'[^']*'");
     private static final Pattern OPERATION = Pattern.compile("[+\\-*/.=()]");
+    private static final Pattern OPERATORS = Pattern.compile("[><=]");
     private TreeMap<String, Pattern> patterns = new TreeMap<>();
 
     private static Character SHIFT = ' ';
@@ -50,6 +51,7 @@ public class LexAnalyser {
         patterns.put("Real number", NUMBER);
         patterns.put("String", STRING);
         patterns.put("Operator", OPERATION);
+        patterns.put("BoolOperator", OPERATORS);
         patterns.put("Keyword", KEYWORD);
     }
 

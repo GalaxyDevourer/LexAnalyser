@@ -3,7 +3,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane prefHeight="500.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.java.controllers.SyntController">
+<AnchorPane prefHeight="500.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.SyntController">
    <children>
       <Button fx:id="start_processing_button" layoutX="385.0" layoutY="14.0" mnemonicParsing="false" onMouseClicked="#startProcessing" prefHeight="25.0" prefWidth="205.0" text="Start Processing" />
       <TextField fx:id="input_field" layoutX="10.0" layoutY="14.0" prefHeight="25.0" prefWidth="353.0" />

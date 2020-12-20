@@ -1,4 +1,4 @@
-package main.java.entities;
+package entities;
 
 public class LexisEntity {
     private String token;
